@@ -23,7 +23,7 @@ const ModeProvider = ({
   return (
     <html lang="en" data-theme={mode}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-gray-500 bg-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-black bg-white`}
       >
         {children}
       </body>
