@@ -1,8 +1,12 @@
+
+import { modeReducer } from './features/modeSlice';
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 
 export const store = configureStore({
-    reducer: {},
+    reducer: {
+        mode: modeReducer
+    },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({serializableCheck: false})
 });
 
