@@ -19,6 +19,7 @@ export type FormFieldProps = {
   register: UseFormRegister<FromData>;
   error: FieldError | undefined;
   valueAsNumber?: boolean;
+  className?: string;
 };
 
 export type ValidFieldNames =
