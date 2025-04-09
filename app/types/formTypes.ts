@@ -9,14 +9,14 @@ export type FromData = {
   zip_code: number;
   username: string;
   password: string;
-  confirm_password?: string;
+  confirm_password: string;
 };
 
 export type FormFieldProps = {
   type: string;
   placeholder: string;
   name: ValidFieldNames;
-  register: UseFormRegister<FormData>;
+  register: UseFormRegister<FromData>;
   error: FieldError | undefined;
   valueAsNumber?: boolean;
 };

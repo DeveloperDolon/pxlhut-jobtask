@@ -1,5 +1,7 @@
 "use client";
 
+
+import Form from "./components/Form";
 import { setMode } from "./store/features/modeSlice";
 import { useAppDispatch, useAppSelector } from "./store/store";
 
@@ -20,9 +22,7 @@ export default function Home() {
         </h2>
       </div>
 
-      <form>
-        <input type="text" />
-      </form>
+      <Form/>
     </div>
   );
 }
