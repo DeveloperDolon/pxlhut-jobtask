@@ -1,6 +1,5 @@
 "use client";
 
-
 import Form from "./components/Form";
 import { setMode } from "./store/features/modeSlice";
 import { useAppDispatch, useAppSelector } from "./store/store";
