@@ -1,4 +1,6 @@
-type FromData = {
+import { FieldError, UseFormRegister } from "react-hook-form";
+
+export type FromData = {
   full_name: string;
   email: string;
   phone: string;
@@ -10,7 +12,7 @@ type FromData = {
   confirm_password?: string;
 };
 
-type FormFieldProps = {
+export type FormFieldProps = {
   type: string;
   placeholder: string;
   name: ValidFieldNames;
