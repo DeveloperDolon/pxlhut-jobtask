@@ -16,10 +16,11 @@ const Form = () => {
     resolver: zodResolver(formValidationSchema),
   });
   return (
-    <form className="flex flex-col gap-2 w-full max-w-md mx-auto mt-10">
-      <div>
+    <form className=" mt-10">
+      <div className="flex flex-col gap-2 max-w-xl mx-auto">
         <FormField
           type="text"
+          label="Full Name"
           placeholder="Full Name"
           name="full_name"
           register={register}
@@ -28,6 +29,7 @@ const Form = () => {
 
         <FormField
           type="email"
+          label="Email"
           placeholder="Email"
           name="email"
           register={register}
@@ -36,6 +38,7 @@ const Form = () => {
 
         <FormField
           type="text"
+          label="Phone"
           placeholder="Phone"
           name="phone"
           register={register}
@@ -43,6 +46,7 @@ const Form = () => {
         />
         <FormField
           type="text"
+          label="Street Address"
           placeholder="Street Address"
           name="street_address"
           register={register}
@@ -50,6 +54,7 @@ const Form = () => {
         />
         <FormField
           type="text"
+          label="City"
           placeholder="City"
           name="city"
           register={register}
@@ -58,6 +63,7 @@ const Form = () => {
         <FormField
           type="number"
           placeholder="Zip Code"
+          label="Zip Code"
           name="zip_code"
           register={register}
           error={errors.zip_code}
@@ -66,6 +72,7 @@ const Form = () => {
         <FormField
           type="text"
           placeholder="Username"
+          label="Username"
           name="username"
           register={register}
           error={errors.username}
@@ -73,12 +80,14 @@ const Form = () => {
         <FormField
           type="password"
           placeholder="Password"
+          label="Password"
           name="password"
           register={register}
           error={errors.password}
         />
         <FormField
           type="password"
+          label="Confirm Password"
           placeholder="Confirm Password"
           name="confirm_password"
           register={register}
@@ -89,7 +98,7 @@ const Form = () => {
           onClick={handleSubmit((data) => {
             console.log(data);
           })}
-          className="cursor-pointer px-2 py-1 text-white dark:text-gray-600 dark:bg-white bg-gray-500 w-fit mx-auto rounded-lg"
+          className="cursor-pointer block px-2 py-1 text-white dark:text-gray-600 dark:bg-white bg-gray-500 w-fit mx-auto rounded-lg"
         >
           Submit
         </button>

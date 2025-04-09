@@ -20,6 +20,7 @@ export type FormFieldProps = {
   error: FieldError | undefined;
   valueAsNumber?: boolean;
   className?: string;
+  label?: string;
 };
 
 export type ValidFieldNames =
