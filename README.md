@@ -16,9 +16,6 @@ A brief about how to run the project.
 # Install dependencies
 ``npm install``
 
-# or
-``yarn install``
-
 <p>
     Please don't remember to update .env file, for api base url.
 </p>
