@@ -58,7 +58,11 @@ const MultiStepForm = () => {
     try
     {
       const response = await createUser(data);
-      alert(response?.error?.error);
+      if ('data' in response) {
+        alert("User created successfully!");
+      } else if ('error' in response) {
+        alert(`Error: ${JSON.stringify(response.error)}`);
+      }
     }
     catch (error) {
       console.error("Error creating user:", error);
