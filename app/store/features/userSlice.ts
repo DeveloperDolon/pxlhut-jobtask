@@ -24,7 +24,7 @@ const initialState: UserData = {
 };  
 
 export const userSlice = createSlice({
-    name: "mode",
+    name: "user",
     initialState,
     reducers: {
         setUserData: (state, action) => {

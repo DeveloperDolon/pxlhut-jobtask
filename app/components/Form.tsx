@@ -6,10 +6,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { formValidationSchema } from "../formValidation/formValidationSchema";
 import { FromData } from "../types/formTypes";
 import FormField from "./FormField";
+import { useAppDispatch, useAppSelector } from "../store/store";
+import { setUserData } from "../store/features/userSlice";
 
 const MultiStepForm = () => {
-  const [userData, setUserData] = useState<FromData | null>(null);
   const [step, setStep] = useState(1);
+  const dispatch = useAppDispatch();
+  const user = useAppSelector((state => state.user));
   const {
     register,
     handleSubmit,
@@ -38,8 +41,8 @@ const MultiStepForm = () => {
   };
 
   const onSubmit = (data: FromData) => {
-    setUserData(data);
-    console.log("Form submitted successfully:", userData);
+    console.log("Form submitted successfully:", data);
+    dispatch(setUserData(data));
   };
 
   return (
