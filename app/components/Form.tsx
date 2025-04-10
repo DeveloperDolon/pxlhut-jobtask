@@ -11,7 +11,7 @@ import { setUserData } from "../store/features/userSlice";
 
 const MultiStepForm = () => {
   const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState<FromData | null>(null); // Store form data for review
+  const [formData, setFormData] = useState<FromData | null>(null);
   const dispatch = useAppDispatch();
   
   const {
