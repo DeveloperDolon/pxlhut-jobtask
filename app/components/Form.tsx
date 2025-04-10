@@ -8,11 +8,13 @@ import { FromData } from "../types/formTypes";
 import FormField from "./FormField";
 import { useAppDispatch } from "../store/store";
 import { setUserData } from "../store/features/userSlice";
+import { useCreateUserMutation } from "../store/api/userApi";
 
 const MultiStepForm = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState<FromData | null>(null);
   const dispatch = useAppDispatch();
+  const [createUser] = useCreateUserMutation();
   
   const {
     register,
@@ -48,12 +50,19 @@ const MultiStepForm = () => {
     setStep(step - 1);
   };
 
-  const onSubmit = (data: FromData) => {
+  const onSubmit = async (data: FromData) => {
     console.log("Form submitted successfully:", data);
     dispatch(setUserData(data));
     reset();
     setStep(1);
-    alert("Form submitted successfully!");
+    try
+    {
+      const response = await createUser(data);
+      alert(response?.error?.error);
+    }
+    catch (error) {
+      console.error("Error creating user:", error);
+    }
   };
 
   return (
