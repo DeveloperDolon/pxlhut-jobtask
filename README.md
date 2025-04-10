@@ -17,7 +17,7 @@ A brief about how to run the project.
 ``npm install``
 
 <p>
-    Please don't remember to update .env file, for api base url.
+    Please don't forget to update .env file, for api base url.
 </p>
 
 ``NEXT_PUBLIC_API_URL=https://www.hello-world.com``
