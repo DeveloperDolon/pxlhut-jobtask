@@ -8,7 +8,7 @@ export default function Home() {
   const mode = useAppSelector((state) => state.mode.mode);
   const dispatch = useAppDispatch();
   return (
-    <div className="font-[family-name:var(--font-geist-sans)] mb-20">
+    <div className="font-[family-name:var(--font-geist-sans)] mb-20 md:px-0 px-5">
       <div className="flex justify-center flex-col mt-10">
         <button
           onClick={() => dispatch(setMode(mode == "dark" ? "light" : "dark"))}
